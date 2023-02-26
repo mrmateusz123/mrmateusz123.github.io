@@ -54,10 +54,13 @@ h1:hover{
     cursor: help;
 }
 .mrowa{
-    width: 101%;
-    height: 121%;
     filter: brightness(0.5);
     position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 200vw;
 }
 .test{
     margin: -10px;
