@@ -38,18 +38,6 @@ h1:hover{
 .test{
     margin: -10px;
 }
-.p2{
-    position: absolute;
-    top: 223%;
-    left: 95%;
-    transform: translate(-50%,-50%);
-    color: black;
-    font-size: 15px;
-}
-.p2:hover{
-    text-shadow: 2px 2px 1px white;
-    cursor: help;
-}
 .article_list1{
     display: inline-flex;
     gap: 15px;
