@@ -26,10 +26,10 @@
 #BGvideo{
     filter: brightness(0.5);
     position: fixed;
-    background-size: 270%;
+    background-size: 3000%;
     z-index: -1;
     transform: translate(-50%, -30%);
-    height: 700%;
+    height: 150%;
 }
 
 .row{
@@ -67,7 +67,7 @@
     }
     .box{
         filter: opacity(100%);
-        width: 70vw;
+        width: 30vw;
         margin-left: auto;
         margin-right: auto;
         font-size: 15px;
@@ -85,48 +85,32 @@
 body{
     margin: 0%;
     color: #ffffff;
-    background-color: #000000;
+    background-color: green;
     text-align: center;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
     overflow-x: hidden;
 }
 
-#BGvideo{
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    width: 100vw;
-}
-
-
 .box{
     background-color: rgba(0,0,0,0.5);
-    border: 2px solid #ffffff;
-    border-radius: 10px;
-    text-align: center;
+    border: 2px solid green;
+    border-radius: 0px;
     transition: 1s;
 }
 
 .box:hover{
     scale: 120%;
-    background-color: #555555;
-    box-shadow: 0px 0px 10px #ffffff;
+    background-color: greenyellow;
+    box-shadow: 0px 0px 10px darkgreen;
     transition: 1s;
 }
 
 .box img{
-    border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
 }
 
 @media (orientation: portrait){
-    #BGvideo{
-        width: 100vw;
-        height: 100vh;
-    }
     .banner{
         font-size: 20px;
         margin-top: 10vh;
