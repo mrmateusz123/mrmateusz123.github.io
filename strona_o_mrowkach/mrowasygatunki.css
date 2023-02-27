@@ -14,7 +14,7 @@
     position: fixed;
     background-size: cover;
     z-index: -1;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -25%);
 }
 .navigation{
     position: absolute;
