@@ -12,10 +12,10 @@
 .mrowa{
     filter: brightness(0.5);
     position: fixed;
-    background-size: 350%;
+    background-size: 1000%;
     z-index: -1;
     transform: translate(-50%, -50%);
-    height: 130%;
+    height: 200%;
 }
 .navigation{
     position: absolute;
