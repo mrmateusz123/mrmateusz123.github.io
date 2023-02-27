@@ -28,7 +28,7 @@
     position: fixed;
     background-size: 2000%;
     z-index: -1;
-    transform: translate(-50%, -10%);
+    transform: translate(-50%, -15%);
     height: 120%;
 }
 
