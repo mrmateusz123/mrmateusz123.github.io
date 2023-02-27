@@ -12,7 +12,7 @@
 .mrowa{
     filter: brightness(0.5);
     position: fixed;
-    background-size: 270%;
+    background-size: 300%;
     z-index: -1;
     transform: translate(-50%, -30%);
 }

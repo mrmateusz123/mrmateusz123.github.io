@@ -1,3 +1,8 @@
+.banner{
+    font-size: 50px;
+    margin-top: 35vh;
+    color: green;
+}
 .navigation{
     position: absolute;
     top: 0px;
@@ -17,4 +22,97 @@
 }
 .navigation a:hover{
     text-shadow: 5px 5px 5px black;
+}
+#BGvideo{
+    filter: brightness(0.5);
+    position: fixed;
+    background-size: 2000%;
+    z-index: -1;
+    transform: translate(-50%, -10%);
+    height: 120%;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.box{
+    width: 30vw;
+    margin: 30px;
+    padding: 10px;
+}
+
+
+.box>img{
+    max-width: 25vw;
+    max-height: 40vh;
+}
+
+
+.name{
+    font-size: 50px;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: greenyellow;
+}
+
+
+@media (orientation: portrait) , (max-width: 1200px){
+    
+    .row{
+        display: block;
+    }
+    .box{
+        filter: opacity(100%);
+        width: 30vw;
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 15px;
+    }
+    .box>img{
+        width: 40vw;
+    }
+    .name{
+        visibility: hidden;
+        position: absolute;
+    }
+
+}
+
+body{
+    margin: 0%;
+    color: #ffffff;
+    background-color: #000000;
+    text-align: center;
+    font-family: 'Sofia Sans Semi Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+.box{
+    background-color: rgba(0,0,0,0.5);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.box:hover{
+    scale: 120%;
+    background-color: #555555;
+    box-shadow: 0px 0px 10px #ffffff;
+    transition: 1s;
+}
+
+.box img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (orientation: portrait){
+    .banner{
+        font-size: 20px;
+        margin-top: 10vh;
+    }
 }
