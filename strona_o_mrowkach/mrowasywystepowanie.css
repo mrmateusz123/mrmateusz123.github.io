@@ -28,7 +28,7 @@
     position: fixed;
     background-size: 3000%;
     z-index: -1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     height: 150%;
 }
 
@@ -85,7 +85,7 @@
 body{
     margin: 0%;
     color: #ffffff;
-    background-color: #000000;
+    background-color: green;
     text-align: center;
     font-family: 'Sofia Sans Semi Condensed', sans-serif;
     overflow-x: hidden;
