@@ -28,8 +28,8 @@
     position: fixed;
     background-size: 2000%;
     z-index: -1;
-    transform: translate(-50%, -15%);
-    height: 120%;
+    transform: translate(-50%, -25%);
+    height: 150%;
 }
 
 .row{
@@ -94,7 +94,7 @@ body{
 .box{
     background-color: rgba(0,0,0,0.5);
     border: 2px solid #ffffff;
-    border-radius: 10px;
+    border-radius: 0px;
     transition: 1s;
 }
 
