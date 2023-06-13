@@ -1,0 +1,102 @@
+[
+    {
+        "marka":"Volkswagen",
+        "model":"Golf",
+        "rok":"2020",
+        "przebieg":"10 000km",
+        "silnik":"1.6 MPI 102KM",
+        "paliwo":"Benzyna",
+        "cena":"80000",
+        "img":"obrazy/golf.jpg"
+    },
+    {
+        "marka":"Ford",
+        "model":"Focus",
+        "rok":"2021",
+        "przebieg":"5 000km",
+        "silnik":"1.0 EcoBoost",
+        "paliwo":"Benzyna",
+        "cena":"75000",
+        "img":"obrazy/focus.jpg"
+    },
+    {
+        "marka":"Toyota",
+        "model":"Corolla",
+        "rok":"2023",
+        "przebieg":"200 000km",
+        "silnik":"1.8 hybrid",
+        "paliwo":"elektryczność",
+        "cena":"90000",
+        "img":"obrazy/corola.jpg"
+    },
+    {
+        "marka":"BMW",
+        "model":"3 Series",
+        "rok":"2022",
+        "przebieg":"15 600km",
+        "silnik":"2.0 Turbo",
+        "paliwo":"Benzyna",
+        "cena":"120000",
+        "img":"obrazy/3ser.jpg"
+    },
+    {
+        "marka":"Mercedes",
+        "model":"Benz C-Class",
+        "rok":"2022",
+        "przebieg":"15 600km",
+        "silnik":"1.6 Turbo",
+        "paliwo":"Benzyna",
+        "cena":"140000",
+        "img":"obrazy/OIP.jpg"
+    },
+    {
+        "marka":"Volkswagen",
+        "model":"Polo",
+        "rok":"2021",
+        "przebieg":"8 000km",
+        "silnik":"1.0 MPI",
+        "paliwo":"Benzyna",
+        "cena":"60000",
+        "img":"obrazy/polo.jpg"
+    },    
+    {
+        "marka":"Ford",
+        "model":"Mustang",
+        "rok":"2022",
+        "przebieg":"12 560km",
+        "silnik":"5.0 V8",
+        "paliwo":"Benzyna",
+        "cena":"250000",
+        "img":"obrazy/must.jpg"
+    },
+    {
+        "marka":"Toyota",
+        "model":"RAV4",
+        "rok":"2023",
+        "przebieg":"210 000km",
+        "silnik":"2.5 Hybrid",
+        "paliwo":"elektryczność",
+        "cena":"15000",
+        "img":"obrazy/Toyota-RAV4-Hybrid-Black-Edition-2020-2021-car-07.jpg"
+    },
+    {
+        "marka":"BMW",
+        "model":"X5",
+        "rok":"2021",
+        "przebieg":"7 000km",
+        "silnik":"3.0 Turbo Diesel",
+        "paliwo":"Diesel",
+        "cena":"22000",
+        "img":"obrazy/X5.jpg"
+    },
+    {
+        "marka":"Mercedes",
+        "model":"Benz A-class",
+        "rok":"2022",
+        "przebieg":"9 500km",
+        "silnik":"1.3 Turbo",
+        "paliwo":"Benzyna",
+        "cena":"110000",
+        "img":"obrazy/17c833_009.jpg"
+    }
+]
