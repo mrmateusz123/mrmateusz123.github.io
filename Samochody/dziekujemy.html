@@ -7,7 +7,7 @@
   <title>Randomis.pl-Dziękujemy</title>
   <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
 </head>
-<body>
+<body style="backgound-color:darkblue; color:blue;">
   <div class="col-fluid text-center m-2"><h1>Randomis.pl</h1></div>
   <div class="container-fluid">
     <div class="row mb-3">
@@ -35,7 +35,7 @@
       var sumaCen = sessionStorage.getItem('sumaCen');
 
       if (sumaCen) {
-        document.getElementById('cena').textContent = 'Cena: ' + sumaCen + 'zł';
+        document.getElementById('cena').textContent = 'Łączna cena: ' + sumaCen + 'zł';
       } else {
         window.location.href = 'index.html';
       }

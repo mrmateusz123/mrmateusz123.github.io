@@ -74,7 +74,7 @@
       var checkbox4 = document.getElementById('checkbox4').checked;
   
 
-      window.location.href = 'dziekujemy.html';
+      window.location.href ='dziekujemy.html';
   
       document.getElementById('imie').value = '';
       document.getElementById('nazwisko').value = '';
