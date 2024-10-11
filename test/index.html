@@ -9,23 +9,35 @@
         const max = 6;
 
         function laduj() {
-            const img = new Image();
-            img.src = './zdjecia/' + id + '.jpg';
-            img.onload = () => {
-                document.getElementById('zdjecie').innerHTML = '<img src="' + img.src + '" alt="Galeria Image">';
-                document.getElementById('zdjecie').style.width = '500px';
-                document.getElementById('zdjecie').style.height = '200px';
+            const mainImg = new Image();
+            mainImg.src = './zdjecia/' + id + '.jpg';
+            mainImg.onload = () => {
+                document.getElementById('zdjecie').innerHTML = '<img src="' + mainImg.src + '" alt="Galeria Image">';
             };
-            img.onerror = () => {
+            mainImg.onerror = () => {
                 document.getElementById('zdjecie').innerHTML = 'Nie można załadować zdjęcia';
             };
-            document.getElementById('zdjecia').innerHTML = '';
-            document.getElementById('zdjecia').style.width = '125px';
-            document.getElementById('zdjecia').style.height = '50px';
-            for(var i = 0; i < max; i++){
-                if(i!=id){
-                    img.src = './zdjecia/' + i + '.jpg';
-                    document.getElementById('zdjecia').innerHTML += '<img src= "'  + img.src + '"alt="Galeria Image">';
+
+            // Load thumbnails
+            const thumbnailsDiv = document.getElementById('zdjecia');
+            thumbnailsDiv.innerHTML = ''; // Clear previous thumbnails
+            for (let i = 0; i < max; i++) {
+                if (i !== id) {
+                    const thumbnailImg = new Image();
+                    thumbnailImg.src = './zdjecia/' + i + '.jpg';
+                    thumbnailImg.alt = "Galeria Thumbnail";
+                    thumbnailImg.style.width = '50px'; // Set thumbnail size
+                    thumbnailImg.style.height = 'auto';
+                    thumbnailImg.onclick = () => {
+                        id = i; // Set id to the clicked thumbnail index
+                        laduj(); // Load the selected image
+                    };
+
+                    thumbnailImg.onerror = () => {
+                        thumbnailsDiv.innerHTML += '<div>Nie można załadować miniatury</div>';
+                    };
+
+                    thumbnailsDiv.appendChild(thumbnailImg);
                 }
             }
         }
@@ -34,13 +46,9 @@
             id = (id + 1) % max;
             laduj();
         }
+
         function po() {
-            if (id==0){
-                id=max;
-            }
-            else{
-                id = id - 1;
-            }
+            id = (id - 1 + max) % max; // Ensure id wraps around
             laduj();
         }
 
@@ -59,10 +67,12 @@
         #zdjecie {
             position: relative;
             overflow: hidden;
+            margin-bottom: 20px; /* Space between main image and buttons */
         }
         #zdjecia {
-            position: relative;
-            overflow: hidden;
+            display: flex;
+            gap: 10px; /* Space between thumbnails */
+            overflow-x: auto; /* Allow horizontal scrolling if needed */
         }
         img {
             max-width: 100%;
@@ -73,8 +83,8 @@
 <body>
     <h2>Galeria</h2>
     <div id="zdjecie"></div>
-    <button onclick="zm()">następne</button>
-    <button onclick="po()">poprzednie</button>
+    <button onclick="zm()">Następne</button>
+    <button onclick="po()">Poprzednie</button>
     <div id="zdjecia"></div>
 </body>
 </html>
