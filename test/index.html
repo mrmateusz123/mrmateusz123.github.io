@@ -20,7 +20,6 @@
             const thumbnailsDiv = document.getElementById('zdjecia');
             thumbnailsDiv.innerHTML = '';
             for (let i = 0; i < max; i++) {
-                if (i !== id) {
                     const thumbnailImg = new Image();
                     thumbnailImg.src = './zdjecia/' + i + '.jpg';
                     thumbnailImg.alt = "Galeria Thumbnail";
@@ -36,7 +35,6 @@
                     };
 
                     thumbnailsDiv.appendChild(thumbnailImg);
-                }
             }
         }
 
