@@ -25,6 +25,13 @@
             id = (id + 1) % max;
             laduj();
         }
+        function po() {
+            if (id==0){
+                id=6;
+            }
+            else{
+                id = id - 1;
+            }
 
         window.onload = laduj;
     </script>
@@ -51,6 +58,7 @@
 <body>
     <h2>Galeria</h2>
     <div id="zdjecie"></div>
-    <button onclick="zm()">Zmień zdjęcie</button>
+    <button onclick="zm()">następne</button>
+    <button onclick="po()">poprzednie</button>
 </body>
 </html>
