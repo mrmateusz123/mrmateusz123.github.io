@@ -20,12 +20,13 @@
                 document.getElementById('zdjecie').innerHTML = 'Nie można załadować zdjęcia';
             };
             document.getElementById('zdjecia').innerHTML = '';
+            document.getElementById('zdjecia').style.width = '125px';
+            document.getElementById('zdjecia').style.height = '50px';
             for(var i = 0; i < max; i++){
                 if(i!=id){
                     img.src = './zdjecia/' + i + '.jpg';
                     document.getElementById('zdjecia').innerHTML += '<img src= "'  + img.src + '"alt="Galeria Image">';
                 }
-                
             }
         }
 
@@ -56,6 +57,10 @@
             margin: 0;
         }
         #zdjecie {
+            position: relative;
+            overflow: hidden;
+        }
+        #zdjecia {
             position: relative;
             overflow: hidden;
         }
