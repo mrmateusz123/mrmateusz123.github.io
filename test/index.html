@@ -22,7 +22,8 @@
             document.getElementById('zdjecia').innerHTML = '';
             for(var i = 0; i < max; i++){
                 if(i!=id){
-                    document.getElementById('zdjecia').innerHTML += '<img src= "'./zdjecia/' + i + '.jpg'" alt="Galeria Image">';
+                    img.src = './zdjecia/' + i + '.jpg';
+                    document.getElementById('zdjecia').innerHTML += '<img src= "'  + img.src + '"alt="Galeria Image">';
                 }
                 
             }
