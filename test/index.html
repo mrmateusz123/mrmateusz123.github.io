@@ -17,20 +17,18 @@
             mainImg.onerror = () => {
                 document.getElementById('zdjecie').innerHTML = 'Nie można załadować zdjęcia';
             };
-
-            // Load thumbnails
             const thumbnailsDiv = document.getElementById('zdjecia');
-            thumbnailsDiv.innerHTML = ''; // Clear previous thumbnails
+            thumbnailsDiv.innerHTML = '';
             for (let i = 0; i < max; i++) {
                 if (i !== id) {
                     const thumbnailImg = new Image();
                     thumbnailImg.src = './zdjecia/' + i + '.jpg';
                     thumbnailImg.alt = "Galeria Thumbnail";
-                    thumbnailImg.style.width = '50px'; // Set thumbnail size
+                    thumbnailImg.style.width = '50px';
                     thumbnailImg.style.height = 'auto';
                     thumbnailImg.onclick = () => {
-                        id = i; // Set id to the clicked thumbnail index
-                        laduj(); // Load the selected image
+                        id = i;
+                        laduj();
                     };
 
                     thumbnailImg.onerror = () => {
@@ -48,7 +46,7 @@
         }
 
         function po() {
-            id = (id - 1 + max) % max; // Ensure id wraps around
+            id = (id - 1 + max) % max;
             laduj();
         }
 
@@ -67,12 +65,12 @@
         #zdjecie {
             position: relative;
             overflow: hidden;
-            margin-bottom: 20px; /* Space between main image and buttons */
+            margin-bottom: 20px;
         }
         #zdjecia {
             display: flex;
-            gap: 10px; /* Space between thumbnails */
-            overflow-x: auto; /* Allow horizontal scrolling if needed */
+            gap: 10px;
+            overflow-x: auto;
         }
         img {
             max-width: 100%;
