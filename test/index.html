@@ -19,6 +19,13 @@
             img.onerror = () => {
                 document.getElementById('zdjecie').innerHTML = 'Nie można załadować zdjęcia';
             };
+            document.getElementById('zdjecia').innerHTML = '';
+            for(var i = 0; i < max; i++){
+                if(i!=id){
+                    document.getElementById('zdjecia').innerHTML += '<img src= "'./zdjecia/' + i + '.jpg'" alt="Galeria Image">';
+                }
+                
+            }
         }
 
         function zm() {
@@ -62,5 +69,6 @@
     <div id="zdjecie"></div>
     <button onclick="zm()">następne</button>
     <button onclick="po()">poprzednie</button>
+    <div id="zdjecia"></div>
 </body>
 </html>
