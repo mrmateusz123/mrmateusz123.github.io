@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+}
+
+.cookie-section {
+    margin: 20px;
+}
+
+svg {
+    cursor: pointer;
+    transition: transform 0.1s;
+    user-select: none;
+}
+svg:active {
+    transform: scale(0.9);
+}
+#pointer {
+    width: 10px;
+}
+
+
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    background-color: orange;
+    color: white;
+    border-radius: 5px;
+}
+
+h1 {
+    color: black;
+}
+
+h2 {
+    margin-top: 30px;
+    color: gray;
+}
+.reset-section {
+    margin-top: 20px;
+}
+
+#resetGameBtn {
+    background-color: red;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#resetGameBtn:hover {
+    background-color: darkred;
+}
+#SaveGameBtn {
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#SaveGameBtn:hover {
+    background-color: darkorange;
+}
+#musicall {
+    background-color: lightgreen;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

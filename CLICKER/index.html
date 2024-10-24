@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Clicker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Klikacz Ciastka</h1>
+        <div class="cookie-section">
+            <svg id="cookie" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" onclick="clickCookie()">
+                <circle cx="100" cy="100" r="80" fill="saddlebrown" stroke="brown" stroke-width="4" />
+                
+                <circle cx="80" cy="70" r="10" fill="darkbrown" />
+                <circle cx="120" cy="90" r="8" fill="darkbrown" />
+                <circle cx="140" cy="130" r="12" fill="darkbrown" />
+                <circle cx="60" cy="130" r="9" fill="darkbrown" />
+                <circle cx="100" cy="150" r="7" fill="darkbrown" />
+                <circle cx="90" cy="110" r="6" fill="darkbrown" />
+              </svg>
+            <p>Ilość ciasteczek: <span id="cookieCount">0</span></p>
+        </div>
+        <div class="upgrades">
+            <h2>Ulepszenia</h2>
+            <button id="Clicker" onclick="buyClicker()">Ulepsz Kliknięcia (koszt: <span id="ClickerCost">20</span>) <span id="ClickersAmount">1</span></button><br>
+            <button id="autoClickerBtn" onclick="buyAutoClicker()">Kup Automatyczne Kliknięcia (koszt: <span id="autoClickerCost">100</span>) <span id="autoClickersAmount">0</span></button><br>
+            <button id="autoClickerUpgBtn" onclick="buyAutoClickerUpg()">Ulepsz Automatyczne Kliknięcia (koszt: <span id="autoClickerUpgradesCost">100</span>) <span id="autoClickerUpgrades">1</span></button>
+        </div>
+        <div class="reset-section">
+            <button id="SaveGameBtn" onclick="saveGame()">Zapisz grę</button>
+            <button id="resetGameBtn" onclick="resetGame()">Resetuj grę</button><br>
+            <button id="musicall" onclick="allowmusic()">Muzyka w tle <span id="musicalltext">Wył</span></button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
