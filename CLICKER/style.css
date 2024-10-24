@@ -29,6 +29,28 @@ svg {
 svg:active {
     transform: scale(0.9);
 }
+.cookie-section {
+    position: relative;
+    display: inline-block;
+}
+
+#cookie {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+#cookieboost {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+}
+#cookieboost circle {
+    pointer-events: all;
+}
+
 #pointer {
     width: 10px;
 }
@@ -44,6 +66,10 @@ button {
     background-color: orange;
     color: white;
     border-radius: 5px;
+    transition: transform 0.1s;
+}
+button:active {
+    transform: scale(0.9);
 }
 
 h1 {
