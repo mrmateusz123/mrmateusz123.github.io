@@ -7,6 +7,8 @@ let autoClickerInterval;
 let autoClickerUpgrades = 1;
 let autoClickerUpgradesCost = 100;
 let mainmusall = false;
+let boost = false;
+let BoostTimeout;
 
 const mainmus = new Audio('./SOUNDS/main.mp3');
 mainmus.loop = true;
@@ -70,6 +72,47 @@ setInterval(function () {
         document.getElementById('autoClickerUpgBtn').style.backgroundColor = 'orange';
     }
 }, 100);
+setInterval(function () {
+    createboost();
+}, 30000);
+
+// działaj
+function createboost() {
+    const cookie = document.getElementById('cookieboost');
+    while (cookie.firstChild) {
+        cookie.removeChild(cookie.firstChild);
+    }
+    const boostcookie = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    const randomX = Math.random() * 160 + 20;
+    const randomY = Math.random() * 160 + 20;
+    boostcookie.setAttribute('cx', randomX);
+    boostcookie.setAttribute('cy', randomY);
+    boostcookie.setAttribute('r', 20);
+    boostcookie.setAttribute('fill', 'gold');
+    boostcookie.style.cursor = 'pointer';
+    boostcookie.addEventListener('click', function (event) {
+        document.getElementById('maintext').innerText = 'BOOST x2';
+        document.getElementById('maintext').style.color = 'gold';
+        const boostsound = new Audio('./SOUNDS/boost.mp3');
+        boostsound.play();
+        mainmus.pause();
+        boost = true;
+        clearTimeout(BoostTimeout);
+        BoostTimeout = setTimeout(function () {
+            boost = false;
+            if(mainmusall){
+                mainmus.play();
+            }
+            document.getElementById('maintext').innerText = 'Klikacz Ciastka';
+            document.getElementById('maintext').style.color = 'black';
+        }, 10000);
+        cookie.removeChild(boostcookie);
+        event.stopPropagation();
+    });
+
+    cookie.appendChild(boostcookie);
+}
+// błagam
 
 function loadGame() {
     const savedCookieCount = localStorage.getItem('cookieCount');
@@ -109,6 +152,7 @@ function loadGame() {
         autoClickerUpgradesCost = parseInt(savedautoClickerUpgradesCost);
         document.getElementById('autoClickerUpgradesCost').innerText = autoClickerUpgradesCost;
     }
+    // ostatecznie to usunołem bo w konsoli wyskakiwał błąd że użytkownik musi coś zrobić na stronie by muzyka zaczeła grać więc poprostu to usunołem
     // if (savedAllowedMusic !== null) {
     //     mainmusall = (savedAllowedMusic === 'true');
     //     if (mainmusall) {
@@ -121,6 +165,7 @@ function loadGame() {
     //         document.getElementById('musicalltext').innerText = "Wył";
     //     }
     // }
+    // leniwy jestem
     updateAutoClickers();
 }
 
@@ -157,21 +202,31 @@ function resetGame() {
     mainmusall = false;
     mainmus.pause();
     mainmus.currentTime = 0;
-    document.getElementById('musicall').style.backgroundColor = 'lightgreen';
+    document.getElementById('musicall').style.backgroundColor = 'lightgreen';                   
     document.getElementById('musicalltext').innerText = "Wył";
     playresetsound();
 }
 
 function autoclickCookie() {
-    cookieCount += autoClickers * autoClickerUpgrades;
+    if(boost){
+        cookieCount += autoClickers * autoClickerUpgrades * 2;
+    }
+    else {
+        cookieCount += autoClickers * autoClickerUpgrades;
+    }
     document.getElementById('cookieCount').innerText = cookieCount;
     playautoclicksound();
 }
 
 function clickCookie() {
-    playclicksound();
-    cookieCount += clickers;
+    if(boost){
+        cookieCount += clickers * 2;
+    }
+    else {
+        cookieCount += clickers;
+    }
     document.getElementById('cookieCount').innerText = cookieCount;
+    playclicksound();
 }
 
 function buyAutoClicker() {
@@ -236,6 +291,9 @@ function allowmusic() {
 }
 
 document.addEventListener('keydown', function(event) {
+    if (event.repeat) {
+        return;
+    }
     if (event.key === '1') {  
         buyClicker();
     }
