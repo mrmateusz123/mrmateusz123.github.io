@@ -1,0 +1,66 @@
+body{
+    margin: 0px;
+    background-color: #EEE;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.kontener{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav{
+    display: flex;
+    background-color: lightblue;
+}
+
+.logo{
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu{
+    height: 100px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.baner{
+    background-color: #DDD;
+    height: 200px;
+}
+
+.Glowny{
+    color: navy;
+    margin: 50px;
+    height: 400px;
+}
+
+.Autor{
+    text-align: end;
+    background-color: lightblue;
+    padding: 10px;
+}
+
+button{
+    background-color: lightblue;
+    color: navy;
+}
+
+a{
+    color: navy;
+    font-size: 150%;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 10px;
+    padding: 5px;
+}
+
+a:hover{
+    border: navy solid 1px;
+}
+
