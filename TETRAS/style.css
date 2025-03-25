@@ -129,7 +129,7 @@ body {
     background-color: black;
     margin: 0; 
     height: 100vh;
-    background-image: url('IMAGES/BACKGROUND.jpg');
+    background-image: url('./IMAGES/BACKGROUND.jpg');
     background-size: cover;
     background-position: center center; 
     background-repeat: no-repeat;
