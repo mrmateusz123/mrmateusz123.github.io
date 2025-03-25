@@ -55,13 +55,11 @@
     font-size: 1.2em;
     font-weight: bold;
     color: white;
-    border: 2px solid cyan;
     display: inline-block;
     padding: 10px;
-    margin: 10px auto;
+    margin: 2px;
     width: auto; 
-    max-width: 300px; 
-    background: black;
+    max-width: 500px; 
 }
 .volume {
     text-align: center;
