@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETRAS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="disclaimer">
+        <p>This website was created for educational purposes only. All rights to the content, design, and other intellectual properties belong to their respective owners. I do not claim ownership of any copyrighted materials and disclaim any rights over them. The purpose of this project is solely to demonstrate web development skills and is not intended for commercial use.</p>
+        <button onclick = "soulsold()">I understand</button>
+    </div>
+    <div class = 'infotext'>
+        <div class="circle-text">
+            <h1 class = 'rainbow-text'>TETRAS</h1>
+        </div>
+        <h3 class = 'high-score'>HIGH SCORE: 0 PLAYER: none</h3>
+        <h3 class = 'your-high-score'>YOUR HIGH SCORE: 0</h3>
+    </div>
+    <div class = 'start'>
+        <button onclick="startGame()">Start Game</button><br>
+        <button onclick="options()">Options</button>
+    </div>
+    <div class = 'options'>
+        <label for="volumeControl" class = 'volume'>Volume:</label>
+        <input type="range" id="volumeControl" min="0" max="1" step="0.01" value="1"><br>
+        <button onclick="changeControls()">Change Controls</button>
+        <button onclick="backtomenu()">Back</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

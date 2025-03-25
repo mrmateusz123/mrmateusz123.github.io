@@ -1,0 +1,136 @@
+@keyframes rainbow {
+    0% { color: lightblue; }
+    14% { color: darkblue; }
+    28% { color: orange; }
+    42% { color: yellow; }
+    57% { color: green; }
+    71% { color: purple; }
+    85% { color: red; }
+    100% { color: lightblue; }
+}
+.disclaimer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 1.5em;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 30px;
+    border-radius: 15px;
+}
+#volumeControl {
+    width: 400px;
+    height: 30px;
+    -webkit-appearance: none;
+    background: gray;
+    border-radius: 1000px;
+    outline: none;
+}
+
+#volumeControl::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+    background: blue;
+    border-radius: 1000px;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+#volumeControl::-moz-range-thumb {
+    width: 100px;
+    height: 100px;
+    background: darkblue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.high-score,.your-high-score{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: white;
+}
+.volume {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+}
+.rainbow-text {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    animation: rainbow 20s infinite linear;
+}
+.circle-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 110px;
+    border: 5px solid  cyan;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0.8); ;
+    padding: 20px;
+}
+.start button {
+    font-size: 60px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid cyan;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.options button{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid cyan;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.disclaimer button{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid cyan;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+button:hover {
+    background: cyan;
+    color: black;
+    box-shadow: 0 0 10px cyan;
+}
+.start, .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+.infotext, .start, .options {
+    display: none;
+}
+body {
+    background-color: black;
+    margin: 0; 
+    height: 100vh;
+    background-image: url('IMAGES/BACKGROUND.jpg');
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat;
+}
