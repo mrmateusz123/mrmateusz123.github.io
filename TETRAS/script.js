@@ -3,6 +3,7 @@ audio.loop = true;
 const volumeControl = document.getElementById("volumeControl");
 const optionsDiv = document.querySelector('.options');
 const menuDiv = document.querySelector('.start');
+const highScoreDisplay = document.querySelector('.high-score');
 
 
 function soulsold() {
@@ -15,8 +16,7 @@ function soulsold() {
 fetch('highscore.json')
     .then(response => response.json())
     .then(data => {
-        console.log(data.highscore);
-        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore}`;
+        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} PLAYER: ${data.nickname}`;
     });
 
     
