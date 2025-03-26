@@ -18,7 +18,7 @@ function soulsold() {
 fetch('highscore.json')
     .then(response => response.json())
     .then(data => {
-        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} PLAYER: ${data.nickname}`;
+        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} BY: ${data.nickname}`;
     });
 
     
