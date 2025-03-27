@@ -164,8 +164,15 @@ button:hover {
     gap: 15px;
     margin-top: 20px;
 }
-.main, .start, .options, .info-text {
+.main, .start, .options, .info-text, .board {
     display: none;
+}
+.board{
+    align-items: center;
+}
+.board img{
+    width: 500px;
+    height: 1000px;
 }
 body {
     background-color: black;
