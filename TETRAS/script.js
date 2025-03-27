@@ -4,7 +4,13 @@ const volumeControl = document.getElementById("volumeControl");
 const optionsDiv = document.querySelector('.options');
 const menuDiv = document.querySelector('.start');
 const infoDiv = document.querySelector('.info-text');
+const boardDiv = document.querySelector('.board');
+const mainDiv = document.querySelector('.main');
 const highScoreDisplay = document.querySelector('.high-score');
+const tetrasboard = []
+for (let i = 0; i<20;i++){
+    tetrasboard.push(new Array(10).fill(0))
+}
 
 
 function soulsold() {
@@ -23,9 +29,15 @@ fetch('highscore.json')
 
     
 function startGame(){
+    loadboard()
 }
-
-
+function loadboard(){
+    optionsDiv.style.display = "none";
+    menuDiv.style.display = "none";
+    infoDiv.style.display = "none";
+    mainDiv.style.display = "none";
+    boardDiv.style.display = "flex";
+}
 function options() {
     optionsDiv.style.display = "flex";
     menuDiv.style.display = "none";
