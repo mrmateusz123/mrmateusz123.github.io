@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efekty obrazu</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <section>
+        <img src = "./pliki/pszczola.jpg" alt = "przczoła na fioletowym kwiatku" id = "obrazek1">
+        <form >
+            <label><input type="radio" name="efekt" value="Blur" checked>Blur</label>
+            <label><input type="radio" name="efekt" value="Sepia">Sepia</label>
+            <label><input type="radio" name="efekt" value="Negatyw">Negatyw</label>
+        </form>
+        <button onclick="transform1()">Zastosuj</button>
+    </section>
+    <section >
+        <img src = "./pliki/pomarancza.jpg" alt = "drzewo pomarańczy" id = "obrazek2"><br>
+        <button onclick="transform2colored()">Kolorowy</button>
+        <button onclick="transform2black_white()">Czarno-biały</button>
+    </section>
+    <section>
+        <img src = "./pliki/owoce.jpg" alt = "Kosz pełen owoców" id = "obrazek3">
+        <input type="range" id="slider" min="0" max="100" value="100"><br>
+        <button onclick="transform3()">Zastosuj</button>
+    </section>
+    <section>
+        <img src = "./pliki/zolw.jpg" alt = "żółw w wodzie" id = "obrazek4">
+        <input type="range" id="slider2" min="0" max="250"><br>
+        <button onclick="transform4()">Zastosuj</button>
+    </section>
+    <footer>
+        <p><a href="http://www.css.com" target = "_blank">Zobacz inne efekty obrazu</a></p>
+        <p>Stronę wykonał: Pan Mateusz</p>
+    </footer>
+    <script>
+        function transform1(){
+            const obrazek = document.querySelector("#obrazek1");
+            const sel = document.querySelector('input[name="efekt"]:checked').value;
+            if(sel == "Blur"){
+                obrazek.style.filter = "blur(4px)";
+            } else if(sel == "Sepia"){
+                obrazek.style.filter = "sepia(100%)";
+            } else if(sel == "Negatyw"){
+                obrazek.style.filter = "invert(100%)";
+            }
+        }
+        function transform2colored(){
+            const obrazek = document.querySelector("#obrazek2");
+            obrazek.style.filter = "none";
+        }
+        function transform2black_white(){
+            const obrazek = document.querySelector("#obrazek2");
+            obrazek.style.filter = "grayscale(100%)";
+        }
+        function transform3(){
+            const obrazek = document.querySelector("#obrazek3");
+            const slider = document.querySelector("#slider").value;
+            obrazek.style.opacity =  slider / 100;
+        }
+        function transform4(){
+            const obrazek = document.querySelector("#obrazek4");
+            const slider = document.querySelector("#slider2").value;
+            obrazek.style = "filter: brightness(" + slider + "%)";
+        }
+    </script>
+</body>
+</html>
