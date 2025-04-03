@@ -13,8 +13,6 @@ header{
     color:white;
     font-size: 150%;
     padding: 10px;
-    position: relative;
-    z-index: 1;
 }
 #lewy{
     background-color: rgba(0,100,0,0.6);
@@ -24,8 +22,6 @@ header{
     font-size: 120%;
     overflow: auto;
     box-shadow: 10px 10px 7px dimgray;
-    position: relative;
-    z-index: 1;
     float: left;
 }
 #prawy1, #prawy2{
@@ -34,8 +30,6 @@ header{
     width:15%;
     height: 300px;
     box-shadow: 10px 10px 7px dimgray;
-    position: relative;
-    z-index: 1;
     float: left;
 }
 footer{
@@ -43,6 +37,10 @@ footer{
     color:white;
     padding: 10px;
     clear: both;
+}
+#lewy,#prawy1,#prawy2,footer,header{
+    position: relative;
+    z-index: 1;
 }
 h1,h2{
     text-align: center;
