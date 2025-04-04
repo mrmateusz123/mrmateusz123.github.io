@@ -19,19 +19,19 @@
             </tr>
             <tr>
                 <td>Krótkie</td>
-                <td>25</td>
+                <td id="kr_c">25</td>
             </tr>
             <tr>
                 <td>Średnie</td>
-                <td>30</td>
+                <td id="śr_c">30</td>
             </tr>
             <tr>
                 <td>Półdługie</td>
-                <td>40</td>
+                <td id="pd_c">40</td>
             </tr>
             <tr>
                 <td>Długie</td>
-                <td>50</td>
+                <td id="dł_c">50</td>
             </tr>
         </table>
     </section>
@@ -62,16 +62,16 @@
             let cena = 0;
             switch(rad){
                 case "Krótkie":
-                    cena = 25-10;
+                    cena = document.getElementById("kr_c").innerHTML - 10;
                     break;
                 case "Średnie":
-                    cena = 30-10;
+                    cena = document.getElementById("śr_c").innerHTML - 10;
                     break;
                 case "Półdługie":
-                    cena = 40-10;
+                    cena = document.getElementById("pd_c").innerHTML - 10;
                     break;
                 case "Długie":
-                    cena = 50-10;
+                    cena = document.getElementById("dł_c").innerHTML - 10;
                     break;
             }
             promocja.innerHTML = "cena promocyjna: " + cena;
