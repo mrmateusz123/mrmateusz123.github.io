@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fryzjerstwo</title>
+    <link rel="stylesheet" href="styl8.css">
+</head>
+<body>
+    <section id="left1">
+        <h1><a href="index.html">SALON FRYZJERSKI</a></h1>
+    </section>
+    <section id="right1">
+        <h4><a href="fryzura.html">Ceny strzyżenia</a></h4>
+        <table>
+            <tr>
+                <td>Długość włosów</td>
+                <td>Cena</td>
+            </tr>
+            <tr>
+                <td>Krótkie</td>
+                <td>25</td>
+            </tr>
+            <tr>
+                <td>Średnie</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Półdługie</td>
+                <td>40</td>
+            </tr>
+            <tr>
+                <td>Długie</td>
+                <td>50</td>
+            </tr>
+        </table>
+    </section>
+    <section id="left2">
+        <h2>PROMOCJA!</h2>
+        <form id = "promocjaForm">
+            <label><input type="radio" name="promocja" value="Krótkie" checked>Krótkie</label><br>
+            <label><input type="radio" name="promocja" value="Średnie">Średnie</label><br>
+            <label><input type="radio" name="promocja" value="Półdługie">Półdługie</label><br>
+            <label><input type="radio" name="promocja" value="Długie">Długie</label><br>
+        </form>
+        <br><button onclick="promotion()">Odkryj promocję</button>
+        <p id="promocja"></p>
+    </section>
+    <section id="right2">
+        <img src="./pliki/obraz1.jpg" alt="Fryzjerka">
+    </section>
+    <section id="left3">
+        <p>Witaj! Miło nam, że odwiedziłeś nasz salon. Sprawdź promocje!<h4>Kontakt: 444 555 666</h4></p>
+    </section>
+    <footer>
+        <p>Autor: Pan Mateusz</p>
+    </footer>
+    <script>
+        function promotion(){
+            const rad = document.querySelector('input[name="promocja"]:checked').value;
+            const promocja = document.getElementById("promocja");
+            let cena = 0;
+            switch(rad){
+                case "Krótkie":
+                    cena = 25-10;
+                    break;
+                case "Średnie":
+                    cena = 30-10;
+                    break;
+                case "Półdługie":
+                    cena = 40-10;
+                    break;
+                case "Długie":
+                    cena = 50-10;
+                    break;
+            }
+            promocja.innerHTML = "cena promocyjna: " + cena;
+        }
+    </script>
+</body>
+</html>

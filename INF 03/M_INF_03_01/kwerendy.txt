@@ -1,0 +1,4 @@
+1. SELECT imie, nazwisko, stanowisko FROM kadra WHERE stanowisko = "fryzjer" OR stanowisko = "stylista";
+2. SELECT COUNT(id),MAX(cena) FROM uslugi;
+3. SELECT uslugi.nazwa, kadra.imie FROM uslugi JOIN kadra ON uslugi.kadra_id = kadra.id;
+4. ALTER TABLE uslugi ADD COLUMN opinia INT;
