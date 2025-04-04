@@ -1,0 +1,50 @@
+*{
+    font-family: Helvetica;
+}
+header,footer{
+    background-color: saddlebrown;
+    color: white;
+    text-align: center;
+    padding: 7px;
+}
+menu{
+    background-color: peru;
+    width: 80%;
+    height: 40px;
+    padding-top: 20px;
+    margin-top:0%;
+    float:left;
+}
+main{
+    width: 80%;
+    height: 700px;
+    font-size: 120%;
+    overflow: auto;
+}
+#prawy{
+    float: right;
+    background-color: peru;
+    color: white;
+    width: 20%;
+    height: 760px;
+}
+a{
+    color: #DDD;
+    padding-left: 90px;
+    font-size: 140%;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
+#obraz1{
+    float:left;
+    margin: 30px;
+}
+footer{
+    clear: both;
+}
+/* 
+‒ Dla selektora obrazu: opływanie tekstem po prawej stronie (obraz znajduje się po lewej stronie),
+marginesy zewnętrzne 30 px 
+*/
