@@ -8,6 +8,7 @@
     85% { color: red; }
     100% { color: lightblue; }
 }
+/*
 .disclaimer {
     position: absolute;
     top: 50%;
@@ -164,9 +165,11 @@ button:hover {
     gap: 15px;
     margin-top: 20px;
 }
-.main, .start, .options, .info-text, .board {
+    */
+#main, #start, #options, #info-text, #board {
     display: none;
 }
+/*
 .board{
     align-items: center;
 }
@@ -183,3 +186,6 @@ body {
     background-position: center center; 
     background-repeat: no-repeat;
 }
+table{
+    border: 2px solid cyan;
+} */

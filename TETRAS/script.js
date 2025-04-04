@@ -1,43 +1,70 @@
 const audio = new Audio(`./MUSIC/MENU.mp3`);
 audio.loop = true;
 const volumeControl = document.getElementById("volumeControl");
-const optionsDiv = document.querySelector('.options');
-const menuDiv = document.querySelector('.start');
-const infoDiv = document.querySelector('.info-text');
-const boardDiv = document.querySelector('.board');
-const mainDiv = document.querySelector('.main');
-const highScoreDisplay = document.querySelector('.high-score');
-const tetrasboard = []
+const disclaimerDiv = document.getElementById('disclaimer');
+const optionsDiv = document.getElementById('options');
+const menuDiv = document.getElementById('menu');
+const infoDiv = document.getElementById('info');
+const boardDiv = document.getElementById('board');
+const mainDiv = document.getElementById('main');
+// const highScoreDisplay = document.querySelector('.high-score');
+// const board = document.getElementById('board');
+// const table = document.createElement('table');
+const tetrasboard = [];
 for (let i = 0; i<20;i++){
-    tetrasboard.push(new Array(10).fill(0))
+    tetrasboard.push(new Array(10).fill(0));
 }
 
 
 function soulsold() {
     audio.play();
-    document.querySelector('.disclaimer').style.display = "none";
-    document.querySelector('.main').style.display = "block";
-    document.querySelector('.info-text').style.display = "block";
-    document.querySelector('.start').style.display = "flex";
+    disclaimerDiv.style.display = "none";
+
 }
 
-fetch('highscore.json')
-    .then(response => response.json())
-    .then(data => {
-        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} BY: ${data.nickname}`;
-    });
+// fetch('highscore.json')
+//     .then(response => response.json())
+//     .then(data => {
+//         highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} BY: ${data.nickname}`;
+//     });
 
     
-function startGame(){
-    loadboard()
-}
-function loadboard(){
-    optionsDiv.style.display = "none";
-    menuDiv.style.display = "none";
-    infoDiv.style.display = "none";
-    mainDiv.style.display = "none";
-    boardDiv.style.display = "flex";
-}
+// function startGame(){
+//     audio.pause();
+//     audio.loop = false;
+//     // loadboard();
+//     playRandomTrack();
+// }
+// function playRandomTrack(){
+//     audio.src = `./MUSIC/${Math.floor(Math.random() * 6) + 4}.mp3`;
+//     audio.play();
+// }
+// function loadboard(){
+//     optionsDiv.style.display = "none";
+//     menuDiv.style.display = "none";
+//     infoDiv.style.display = "none";
+//     mainDiv.style.display = "none";
+//     boardDiv.style.display = "flex";
+//     board.innerHTML = "";
+
+//     const table = document.createElement('table');
+
+//     for (let i = 0; i < tetrasboard.length; i++) {
+//         const tr = document.createElement('tr');
+//         for (let j = 0; j < tetrasboard[i].length; j++) {
+//             const td = document.createElement('td');
+//             td.textContent = tetrasboard[i][j];
+//             if (tetrasboard[i][j] === 1) {
+//                 td.classList.add('filled');
+//             }
+//             tr.appendChild(td);
+//         }
+//         table.appendChild(tr);
+//     }
+
+//     board.appendChild(table);
+// }
+
 function options() {
     optionsDiv.style.display = "flex";
     menuDiv.style.display = "none";
@@ -48,6 +75,9 @@ function backtomenu(){
     menuDiv.style.display = "flex";
     infoDiv.style.display = "block";
 }
-volumeControl.addEventListener("input", function() {
-    audio.volume = this.value;
-});
+// volumeControl.addEventListener("input", function() {
+//     audio.volume = this.value;
+// });
+// volumeControl.addEventListener("ended", function() {
+//     playRandomTrack();
+// });
