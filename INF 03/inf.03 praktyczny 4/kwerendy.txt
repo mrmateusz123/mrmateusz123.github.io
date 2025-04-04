@@ -1,0 +1,4 @@
+1. SELECT swinki.imie, swinki.miot FROM swinki WHERE MONTH(swinki.data_ur) = 7;
+2. SELECT DISTINCT swinki.data_ur, swinki.miot, rasy.rasa FROM swinki JOIN rasy ON rasy.id = swinki.rasy_id;
+3. SELECT swinki.imie, swinki.cena, swinki.opis FROM swinki WHERE swinki.rasy_id = 1;
+4. SELECT rasy.rasa FROM rasy;
