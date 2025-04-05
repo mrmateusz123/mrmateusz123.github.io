@@ -3,42 +3,52 @@ audio.loop = true;
 const volumeControl = document.getElementById("volumeControl");
 const disclaimerDiv = document.getElementById('disclaimer');
 const optionsDiv = document.getElementById('options');
-const menuDiv = document.getElementById('menu');
-const infoDiv = document.getElementById('info');
-const boardDiv = document.getElementById('board');
-const mainDiv = document.getElementById('main');
-// const highScoreDisplay = document.querySelector('.high-score');
-// const board = document.getElementById('board');
-// const table = document.createElement('table');
-const tetrasboard = [];
-for (let i = 0; i<20;i++){
-    tetrasboard.push(new Array(10).fill(0));
+const menuDiv = document.getElementById('menu-buttons');
+const playerDiv = document.getElementById('player');
+const header = document.getElementById('header');
+const playerHighScoreDisplay = document.getElementById('your-high-score');
+const highScoreDisplay = document.getElementById('high-score');
+const playerNameInput = document.getElementById('playerName');
+let playernickname = "";
+let playerhighscore = 0;
+if(localStorage.getItem('nickname') != null){
+    playernickname = localStorage.getItem('nickname');
+    playerNameInput.value = playernickname;
+}
+if(localStorage.getItem('highscore') !== null){
+    playerhighscore = localStorage.getItem('highscore');
+    playerHighScoreDisplay.textContent = `YOUR HIGH SCORE: ${playerhighscore}`;
+
 }
 
 
 function soulsold() {
     audio.play();
     disclaimerDiv.style.display = "none";
-
+    menuDiv.style.display = "flex";
+    playerDiv.style.display = "block";
+    header.style.display = "flex";
 }
 
-// fetch('highscore.json')
-//     .then(response => response.json())
-//     .then(data => {
-//         highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} BY: ${data.nickname}`;
-//     });
+fetch('highscore.json')
+    .then(response => response.json())
+    .then(data => {
+        highScoreDisplay.textContent = `HIGH SCORE: ${data.highscore} BY: ${data.nickname}`;
+    });
 
     
-// function startGame(){
-//     audio.pause();
-//     audio.loop = false;
-//     // loadboard();
-//     playRandomTrack();
-// }
-// function playRandomTrack(){
-//     audio.src = `./MUSIC/${Math.floor(Math.random() * 6) + 4}.mp3`;
-//     audio.play();
-// }
+function startGame(){
+    audio.pause();
+    // audio.loop = false;
+    // loadboard();
+    playRandomTrack();
+    playernickname = playerNameInput.value;
+    localStorage.setItem('nickname', playernickname);
+}
+function playRandomTrack(){
+    audio.src = `./MUSIC/${Math.floor(Math.random() * 5) + 3}.mp3`;
+    audio.play();
+}
 // function loadboard(){
 //     optionsDiv.style.display = "none";
 //     menuDiv.style.display = "none";
@@ -68,12 +78,12 @@ function soulsold() {
 function options() {
     optionsDiv.style.display = "flex";
     menuDiv.style.display = "none";
-    infoDiv.style.display = "none";
+    playerDiv.style.display = "none";
 }
 function backtomenu(){
     optionsDiv.style.display = "none";
     menuDiv.style.display = "flex";
-    infoDiv.style.display = "block";
+    playerDiv.style.display = "block";
 }
 // volumeControl.addEventListener("input", function() {
 //     audio.volume = this.value;

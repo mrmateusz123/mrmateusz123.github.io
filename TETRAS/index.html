@@ -8,21 +8,19 @@
     <link rel="icon" href="./IMAGES/logo.png">
 </head>
 <body>
+    <header id="header">
+        <h1 id = 'rainbow-text'>TETRAS</h1>
+    </header>
     <div id="disclaimer">
         <p>This website was created for educational purposes only. All rights to the content, design, and other intellectual properties belong to their respective owners. I do not claim ownership of any copyrighted materials and disclaim any rights over them. The purpose of this project is solely to demonstrate web development skills and is not intended for commercial use.</p>
         <button onclick = "soulsold()">I understand</button>
     </div>
-    <div id = 'main'>
-        <h1 id = 'rainbow-text'>TETRAS</h1>
-    </div>
-    <div id = 'info-text'>
+    <div id = 'player'>
         <p id = 'high-score'>HIGH SCORE: 0 BY: none</p><br>
         <p id = 'your-high-score'>YOUR HIGH SCORE: 0</p>
-        <div id = "player-info">
-            <input type="text" id="playerName" name="playerName" maxlength="12" required placeholder="Enter your name">
-        </div> 
+        <input value="TEST" type="text" id="playerName" name="playerName" maxlength="12" required placeholder="Enter your name">
     </div>
-    <div id = 'start'>
+    <div id = 'menu-buttons'>
         <button onclick="startGame()">Start Game</button><br>
         <button onclick="options()">Options</button>
     </div>
@@ -32,8 +30,6 @@
         <button onclick="changeControls()">Change Controls</button>
         <button onclick="resetHighScore()">Reset High Score</button><br>
         <button onclick="backtomenu()">Back</button>
-    </div>
-    <div id = 'board'>
     </div>
     <script src="script.js"></script>
 </body>

@@ -8,8 +8,16 @@
     85% { color: red; }
     100% { color: lightblue; }
 }
-/*
-.disclaimer {
+body {
+    background-color: black;
+    margin: 0;
+    background-image: url('./IMAGES/BACKGROUND.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+#disclaimer {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -21,6 +29,7 @@
     padding: 30px;
     border-radius: 15px;
 }
+/*
 #volumeControl {
     width: 400px;
     height: 30px;
@@ -166,7 +175,7 @@ button:hover {
     margin-top: 20px;
 }
     */
-#main, #start, #options, #info-text, #board {
+#menu-buttons, #player, #options, header {
     display: none;
 }
 /*
@@ -177,15 +186,4 @@ button:hover {
     width: 500px;
     height: 1000px;
 }
-body {
-    background-color: black;
-    margin: 0; 
-    height: 100vh;
-    background-image: url('./IMAGES/BACKGROUND.jpg');
-    background-size: cover;
-    background-position: center center; 
-    background-repeat: no-repeat;
-}
-table{
-    border: 2px solid cyan;
-} */
+*/
