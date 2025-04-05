@@ -18,7 +18,6 @@ if(localStorage.getItem('nickname') != null){
 if(localStorage.getItem('highscore') !== null){
     playerhighscore = localStorage.getItem('highscore');
     playerHighScoreDisplay.textContent = `YOUR HIGH SCORE: ${playerhighscore}`;
-
 }
 
 
