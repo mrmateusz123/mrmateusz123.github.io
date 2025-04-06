@@ -48,31 +48,6 @@ function playRandomTrack(){
     audio.src = `./MUSIC/${Math.floor(Math.random() * 5) + 3}.mp3`;
     audio.play();
 }
-// function loadboard(){
-//     optionsDiv.style.display = "none";
-//     menuDiv.style.display = "none";
-//     infoDiv.style.display = "none";
-//     mainDiv.style.display = "none";
-//     boardDiv.style.display = "flex";
-//     board.innerHTML = "";
-
-//     const table = document.createElement('table');
-
-//     for (let i = 0; i < tetrasboard.length; i++) {
-//         const tr = document.createElement('tr');
-//         for (let j = 0; j < tetrasboard[i].length; j++) {
-//             const td = document.createElement('td');
-//             td.textContent = tetrasboard[i][j];
-//             if (tetrasboard[i][j] === 1) {
-//                 td.classList.add('filled');
-//             }
-//             tr.appendChild(td);
-//         }
-//         table.appendChild(tr);
-//     }
-
-//     board.appendChild(table);
-// }
 
 function options() {
     optionsDiv.style.display = "flex";

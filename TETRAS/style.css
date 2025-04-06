@@ -29,6 +29,17 @@ body {
     padding: 30px;
     border-radius: 15px;
 }
+#disclaimer button{
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid cyan;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
 #rainbow-text {
     text-align: center;
     font-size: 5em;
@@ -48,28 +59,18 @@ header {
     background-color:rgba(0, 0, 0, 0.8); ;
     padding: 20px;
 }
-#volumeControl {
-    width: 400px;
-    height: 30px;
-    -webkit-appearance: none;
-    background: black;
-    border-radius: 1000px;
-    border: 2px solid cyan;
-    outline: none;
+
+#player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    text-align: center;
 }
 
-#volumeControl::-webkit-slider-thumb {
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 1000px;
-    border: 2px solid cyan;
-    -webkit-appearance: none;
-    cursor: pointer;
-}
-
-/*
-.high-score, .your-high-score {
+#high-score, #your-high-score {
     text-align: center;
     font-size: 1.2em;
     font-weight: bold;
@@ -80,18 +81,12 @@ header {
     width: auto; 
     max-width: 1000px; 
 }
-.volume {
-    text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    color: white;
-}
-*/
-/*
-input[type="text"] {
+#playerName {
     padding: 10px;
     font-size: 16px;
-    border: 2px solid cyan;
+    border: 3px solid cyan;
+    color: cyan;
+    background-color: black;
     border-radius: 5px;
     width: 220px;
     margin-top: 5px;
@@ -99,29 +94,15 @@ input[type="text"] {
     transition: border-color 0.3s ease;
     text-align: center;
 }
-
-input[type="text"]:focus {
-    border-color: cyan;
-}
-.info-text {
+#menu-buttons, #options {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
     margin-top: 20px;
-    text-align: center;
 }
-.player-info {
-    text-align: center;
-    margin-top: 5px;
-}
-.playerName{
-    color: white;
-    font-size: 1.5em;
-    text-align: center;
-}
-.start button {
+#menu-buttons button {
     font-size: 60px;
     font-weight: bold;
     color: white;
@@ -132,7 +113,7 @@ input[type="text"]:focus {
     transition: 0.3s;
     text-transform: uppercase;
 }
-.options button{
+#options button{
     font-size: 40px;
     font-weight: bold;
     color: white;
@@ -143,40 +124,29 @@ input[type="text"]:focus {
     transition: 0.3s;
     text-transform: uppercase;
 }
-.disclaimer button{
-    font-size: 20px;
-    font-weight: bold;
-    color: white;
+#volumeControl {
+    width: 400px;
+    height: 30px;
+    -webkit-appearance: none;
     background: black;
+    border-radius: 1000px;
     border: 2px solid cyan;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: 0.3s;
-    text-transform: uppercase;
+    outline: none;
 }
-button:hover {
-    background: cyan;
-    color: black;
+#volumeControl::-webkit-slider-thumb {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 1000px;
+    border: 2px solid cyan;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+button:hover, #playerName:focus, #volumeControl:focus, #volumeControl:hover {
     box-shadow: 0 0 10px cyan;
 }
-.start, .options {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-    */
+
 #menu-buttons, #player, #options, header {
     display: none;
 }
-/*
-.board{
-    align-items: center;
-}
-.board img{
-    width: 500px;
-    height: 1000px;
-}
-*/
