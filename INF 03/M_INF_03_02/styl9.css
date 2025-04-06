@@ -19,13 +19,14 @@ header,footer{
     background-color: mistyrose;
     width: 60%;
     height: 500px;
+    overflow: auto;
 }
 #dane{
     background-color: mistyrose;
     padding:30px;
 }
 ol{
-    list-style-type:upper-alpha;
+    list-style-type: upper-roman;
 }
 li{
     text-align: left;

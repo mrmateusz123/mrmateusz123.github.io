@@ -30,21 +30,14 @@
     <section id="srodkowy">
         <h2>W tym roku jedziemy do...</h2>
         <?php
-            $pol = mysqli_connect("loaclhost","root","","biuro");
+            $pol = mysqli_connect("localhost","root","","podroze");
             $zap = "SELECT zdjecia.nazwaPliku,zdjecia.podpis FROM zdjecia ORDER BY 2;";
             $wyn = mysqli_query($pol,$zap);
-            while($w = fetch_array($wyn)){
-                echo "<figure>";
-                echo "<img src=./pliki/".$w['nazwaPliku']."\" alt=\"".$w['podpis']."\" title=\"".$w['podpis']."\" />";
-                echo "<figcaption>".$w['podpis']."</figcaption>";
-                echo "</figure>";
+            while($w = mysqli_fetch_array($wyn)){
+                echo "<img src='./pliki/$w[0]' alt='$w[1]' title='$w[1]'>";
             }
+            mysqli_close($pol);
         ?>
-        <!-- Wysyła do bazy danych zapytanie 1  
-         – Dane z każdego zwróconego zapytaniem wiersza są wykorzystane do wyświetlenia kolejnych 
-obrazów, w ten sposób, że pole nazwaPliku jest źródłem obrazu, a pole podpis jest tekstem 
-alternatywnym obrazu oraz tekstem pokazującym się w dymku, gdy kursor znajdzie się na grafice, 
-patrz Obraz 2, dymek do grafiki z Londynem -->
     </section>
     <section id="prawy">
         <h2>Kontakt</h2>
@@ -54,7 +47,17 @@ patrz Obraz 2, dymek do grafiki z Londynem -->
     <section id="dane">
         <h3>W poprzednich latach byliśmy...</h3>
         <ol>
-            skrypt2
+            <?php
+                $pol = mysqli_connect("localhost","root","","podroze");
+                $zap = "SELECT wycieczki.cel, wycieczki.dataWyjazdu FROM wycieczki WHERE wycieczki.dostepna = 0;";
+                $wyn = mysqli_query($pol,$zap);
+                while($w = mysqli_fetch_array($wyn)){
+                    echo "<li>Dnia $w[1] pojechaliśmy do $w[0]<br></li>";
+                }
+                mysqli_close($pol);
+            ?>
+            <!-- – Skrypt 2  – Wysyła do bazy danych zapytanie 2  – Każdy zwrócony zapytaniem wiersz jest wyświetlany w elemencie listy, według wzoru: „Dnia <data> 
+pojechaliśmy do <cel>”, gdzie w znakach < > zapisano pola zwracane zapytaniem  – Na końcu działania skrypt zamyka połączenie z serwerem  -->
         </ol>
     </section>
     <footer>
