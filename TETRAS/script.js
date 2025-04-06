@@ -46,7 +46,7 @@ function startGame(){
     localStorage.setItem('nickname', playernickname);
 }
 function playRandomTrack(){
-    audio.src = `./MUSIC/${Math.floor(Math.random() * 5) + 3}.mp3`;
+    audio.src = `./MUSIC/${Math.floor(Math.random() * 6) + 1}.mp3`;
     audio.play();
 }
 
