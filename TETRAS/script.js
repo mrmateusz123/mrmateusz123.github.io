@@ -42,6 +42,7 @@ function startGame(){
     // loadboard();
     playRandomTrack();
     playernickname = playerNameInput.value;
+    localStorage.setItem("volume", volumeControl.value);
     localStorage.setItem('nickname', playernickname);
 }
 function playRandomTrack(){
