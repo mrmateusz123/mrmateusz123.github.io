@@ -84,9 +84,15 @@ function backtomenu(){
     menuDiv.style.display = "flex";
     playerDiv.style.display = "block";
 }
-// volumeControl.addEventListener("input", function() {
-//     audio.volume = this.value;
-// });
+volumeControl.addEventListener("input", function() {
+    audio.volume = this.value;
+    if(audio.volume == 0){
+        audio.pause();
+    }
+    else{
+        audio.play();
+    }
+});
 // volumeControl.addEventListener("ended", function() {
 //     playRandomTrack();
 // });

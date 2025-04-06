@@ -29,7 +29,25 @@ body {
     padding: 30px;
     border-radius: 15px;
 }
-/*
+#rainbow-text {
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    animation: rainbow 20s infinite linear;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 310px;
+    height: 110px;
+    border: 5px solid  cyan;
+    border-radius: 50%;
+    margin: 0 auto;
+    background-color:rgba(0, 0, 0, 0.8); ;
+    padding: 20px;
+}
 #volumeControl {
     width: 400px;
     height: 30px;
@@ -50,16 +68,7 @@ body {
     cursor: pointer;
 }
 
-#volumeControl::-moz-range-thumb {
-    width: 30px;
-    height: 30px;
-    background: white;
-    border-radius: 50%;
-    border: 2px solid cyan;
-    cursor: pointer;
-}
-
-
+/*
 .high-score, .your-high-score {
     text-align: center;
     font-size: 1.2em;
@@ -77,24 +86,8 @@ body {
     font-weight: bold;
     color: white;
 }
-.rainbow-text {
-    text-align: center;
-    font-size: 5em;
-    font-weight: bold;
-    animation: rainbow 20s infinite linear;
-}
-.TETRAS-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 310px;
-    height: 110px;
-    border: 5px solid  cyan;
-    border-radius: 50%;
-    margin: 0 auto;
-    background-color:rgba(0, 0, 0, 0.8); ;
-    padding: 20px;
-}
+*/
+/*
 input[type="text"] {
     padding: 10px;
     font-size: 16px;
