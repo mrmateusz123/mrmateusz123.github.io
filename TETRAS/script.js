@@ -38,15 +38,16 @@ fetch('highscore.json')
     
 function startGame(){
     audio.pause();
-    playRandomTrack();
+    // playRandomTrack();
     playernickname = playerNameInput.value;
     localStorage.setItem("volume", volumeControl.value);
     localStorage.setItem('nickname', playernickname);
+    window.location.href = "game.html";
 }
-function playRandomTrack(){
-    audio.src = `./MUSIC/${Math.floor(Math.random() * 6) + 1}.mp3`;
-    audio.play();
-}
+// function playRandomTrack(){
+//     audio.src = `./MUSIC/${Math.floor(Math.random() * 6) + 1}.mp3`;
+//     audio.play();
+// }
 
 function options() {
     optionsDiv.style.display = "flex";
