@@ -38,8 +38,6 @@ fetch('highscore.json')
     
 function startGame(){
     audio.pause();
-    // audio.loop = false;
-    // loadboard();
     playRandomTrack();
     playernickname = playerNameInput.value;
     localStorage.setItem("volume", volumeControl.value);
@@ -55,6 +53,13 @@ function options() {
     menuDiv.style.display = "none";
     playerDiv.style.display = "none";
 }
+function resetData() {
+    localStorage.clear();
+    playernickname = "";
+    playerNameInput.value = playernickname;
+    playerhighscore = 0;
+    playerHighScoreDisplay.textContent = `YOUR HIGH SCORE: ${playerhighscore}`;
+}
 function backtomenu(){
     optionsDiv.style.display = "none";
     menuDiv.style.display = "flex";
@@ -69,6 +74,3 @@ volumeControl.addEventListener("input", function() {
         audio.play();
     }
 });
-// volumeControl.addEventListener("ended", function() {
-//     playRandomTrack();
-// });
