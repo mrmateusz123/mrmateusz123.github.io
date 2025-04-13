@@ -34,24 +34,24 @@
         <button onclick="Kontakt()">Kontakt</button>
         <section id="main1">
             <p>Imię</p>
-            <input type="text" placeholder ="Wpisz dane...">
+            <input type="text" placeholder ="Wpisz dane..." onfocusout="addPr()">
             <p>Nazwisko</p>
-            <input type="text">
+            <input type="text" onfocusout="addPr()">
             <p>Data urodzenia</p>
-            <input type="date">
+            <input type="date" onfocusout="addPr()">
         </section>
         <section id="main2">
             <p>Ulica</p>
-            <input type="text">
+            <input type="text" onfocusout="addPr()">
             <p>Numer</p>
-            <input type="number">
+            <input type="number" onfocusout="addPr()">
             <p>Miasto</p>
-            <input type="text">
+            <input type="text" onfocusout="addPr()">
         </section>
         <section id="main3">
             <p>Numer komórkowy</p>
-            <input type="text"><br>
-            <input type="checkbox">Akceptuję RODO <br>
+            <input type="text" onfocusout="addPr()"><br>
+            <input type="checkbox" onfocusout="addPr()">Akceptuję RODO <br>
             <button onclick="zatwierdz()">Zatwierdź dane</button>
         </section>
     </section>
@@ -63,6 +63,10 @@
         const klientsec = document.getElementById("main1");
         const adressec = document.getElementById("main2");
         const kontaktsec = document.getElementById("main3");
+        const emptysec = document.getElementById("empty");
+        const inputs = document.querySelectorAll("input");
+        let inp = "";
+        let pr = 4;
         function Klient(){
             adressec.style.display = "none";
             kontaktsec.style.display = "none";
@@ -77,6 +81,18 @@
             adressec.style.display = "none";
             klientsec.style.display = "none";
             kontaktsec.style.display = "block";
+        }
+        function addPr(){
+            if(pr<100){
+                pr += 12;
+                emptysec.style.width = pr + "%";
+            }
+        }
+        function zatwierdz(){
+            inputs.forEach(input => {
+                inp += input.value + ", ";
+            });
+            console.log(inp);
         }
     </script>
 </body>
