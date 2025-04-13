@@ -29,7 +29,7 @@
         <h1>Zajerestruj się w sklepie</h1>
     </header>
     <section id="main">
-        <button onclick="klient()">Klient</button>
+        <button onclick="Klient()">Klient</button>
         <button onclick="Adres()">Adres</button>
         <button onclick="Kontakt()">Kontakt</button>
         <section id="main1">
@@ -48,16 +48,36 @@
             <p>Miasto</p>
             <input type="text">
         </section>
-        <section id="main3"></section>
+        <section id="main3">
+            <p>Numer komórkowy</p>
+            <input type="text"><br>
+            <input type="checkbox">Akceptuję RODO <br>
+            <button onclick="zatwierdz()">Zatwierdź dane</button>
+        </section>
     </section>
-    <section id="pasek">
-
-    </section>
+    <section id="pasek"><section id="empty"></section></section>
     <footer>
-
+        <h4>Rejestrację do sklepu wykonał: Pan Mateusz</h4>
     </footer>
     <script>
-
+        const klientsec = document.getElementById("main1");
+        const adressec = document.getElementById("main2");
+        const kontaktsec = document.getElementById("main3");
+        function Klient(){
+            adressec.style.display = "none";
+            kontaktsec.style.display = "none";
+            klientsec.style.display = "block";
+        }
+        function Adres(){
+            klientsec.style.display = "none";
+            kontaktsec.style.display = "none";
+            adressec.style.display = "block";
+        }
+        function Kontakt(){
+            adressec.style.display = "none";
+            klientsec.style.display = "none";
+            kontaktsec.style.display = "block";
+        }
     </script>
 </body>
 </html>
