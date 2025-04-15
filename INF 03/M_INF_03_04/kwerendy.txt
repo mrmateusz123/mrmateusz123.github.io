@@ -1,0 +1,2 @@
+1. UPDATE wagi SET wagi.czas = CURRENT_TIMESTAMP WHERE lokalizacja_id IN (2,3,4);
+2. SELECT lokalizacje.ulica FROM lokalizacje;
