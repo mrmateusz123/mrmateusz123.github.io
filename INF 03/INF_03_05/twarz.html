@@ -24,22 +24,38 @@
     <section id="prawy1">
         <h1>Usługi kosmetyczne</h1>
     </section>
-    <section id="lewy2">
-        <img src="./pliki/obraz1.jpg" alt="personel">
-    </section>
     <section id="prawy2">
         <h3>Kalkulator ceny wizyty</h3>
-        <input type="checkbox" id="chb1">Peeling
-        <input type="checkbox" id="chb2">Maska
-        <input type="checkbox" id="chb3">Masaż twarzy
-        <input type="checkbox" id="chb4">Makijaż
+        <input type="checkbox" id="chb1">Peeling<br>
+        <input type="checkbox" id="chb2">Maska<br>
+        <input type="checkbox" id="chb3">Masaż twarzy<br>
+        <input type="checkbox" id="chb4">Makijaż<br>
         <button onclick="cena()">Oblicz cenę</button>
         <p id="cenazab">Cena zabiegów: 0</p>
+    </section>
+    <section id="lewy2">
+        <img src="./pliki/obraz1.jpg" alt="personel">
     </section>
     <footer>
         <p>Autor: Pan Mateusz</p>
     </footer>
     <script>
+        function cena(){
+            let cen = 0;
+            if(document.getElementById("chb1").checked == true){
+                cen += 45;
+            }
+            if(document.getElementById("chb2").checked == true){
+                cen += 30;
+            }
+            if(document.getElementById("chb3").checked == true){
+                cen += 20;
+            }
+            if(document.getElementById("chb4").checked == true){
+                cen += 50;
+            }
+            document.getElementById('cenazab').innerHTML = "Cena zabiegów: " + cen;
+        }
 
     </script>
 </body>
