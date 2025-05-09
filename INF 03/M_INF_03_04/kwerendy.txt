@@ -1,4 +1,0 @@
-1. UPDATE wagi SET wagi.czas = CURRENT_TIMESTAMP WHERE lokalizacja_id IN (2,3,4);
-2. SELECT lokalizacje.ulica FROM lokalizacje;
-3. INSERT INTO wagi (lokalizacje_id, waga, rejestracja, dzien, czas) VALUES (5, FLOOR(RAND() * 10) + 1, 'DW12345', CURRENT_DATE, CURRENT_TIME);
-4. SELECT wagi.rejestracja, wagi.waga, wagi.dzien, wagi.czas, lokalizacje.ulica FROM wagi JOIN lokalizacje ON wagi.lokalizacje_id = lokalizacje.id;
