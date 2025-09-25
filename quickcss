@@ -1,0 +1,41 @@
+.App {
+  text-align: center;
+  display: block;
+  align-items: center;
+}
+header{
+  float: up;
+}
+body{
+  background-color: aqua;
+}
+h1{
+  color: blue;
+}
+table{
+  background-color: blue;
+}
+td,th{
+  border: 1px darkblue solid;
+}
+th{
+  font-size: large;
+  color: blueviolet;
+}
+tr:hover{
+  background-color: darkblue;
+  color: blueviolet;
+}
+#wzory{
+  color: darkblue;
+}
+#wymiary{
+  color:yellow;
+}
+h2{
+  color: brown;
+}
+img{
+  height: 100px;
+  width: 100px;
+}
