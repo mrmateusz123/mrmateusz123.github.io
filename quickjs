@@ -1,0 +1,135 @@
+import './App.css';
+import szescian from "./images/szescian.png"
+import prostopadloscian from "./images/prostopadloscian.png"
+import kula from "./images/kula.png"
+
+function objetoscszescian(a){
+  return a**3;
+}
+function poleszescian(a){
+  return 6*(a**2);
+}
+function objetoscprost(a,b,h){
+  return a*b*h;
+}
+function poleprost(a,b,h){
+  return (2*a*b)+(2*a*h)+(2*b*h);
+}
+function objetosckuli(r){
+  return 4/3*Math.PI*(r**3);
+}
+function polekuli(r){
+  return 4*Math.PI*(r**2);
+}
+const Bryly = [
+  {
+    "id":0,"nazwa":"szescian","imgsrc":szescian,"imgalt":"szescian",
+    "wzory":[
+      {
+        "nazwa":"Objetosc","wzor":"V=a^3"
+      },
+      {
+        "nazwa":"Pole","wzor":"P=6a^2"
+      }
+    ],
+    "przyklad":[{
+      "wymiary":[{
+        "numer":1,"wartosc":2
+      },],
+      "wyniki":[{
+        "nazwa":"Objetosc","wynik":objetoscszescian(2)
+      },
+      {
+        "nazwa":"Pole","wynik":poleszescian(2)
+      }
+    ]
+    }]
+  },
+  {
+    "id":1,"nazwa":"prostopadloscian","imgsrc":prostopadloscian,"imgalt":"prostopadloscian",
+    "wzory":[
+      {
+        "nazwa":"Objetosc","wzor":"V=a*b*h"
+      },
+      {
+        "nazwa":"Pole","wzor":"P=2*a*b+2*a*h+2*b*h"
+      }
+    ],
+    "przyklad":[{
+      "wymiary":[{
+        "numer":1,"wartosc":3
+      },
+      {
+        "numer":2,"wartosc":4
+      },
+      {
+        "numer":3,"wartosc":5
+      }],
+      "wyniki":[{
+        "nazwa":"Objetosc","wynik": objetoscprost(3,4,5)
+      },
+      {
+        "nazwa":"Pole","wynik": poleprost(3,4,5)
+      }
+    ]
+    }]
+  },
+    {
+    "id":2,"nazwa":"kula","imgsrc":kula,"imgalt":"kula",
+    "wzory":[
+      {
+        "nazwa":"Objetosc","wzor":"V=4/3*pi*r^3"
+      },
+      {
+        "nazwa":"Pole","wzor":"P=4*pi*r^2"
+      }
+    ],
+    "przyklad":[{
+      "wymiary":[{
+        "numer":1,"wartosc":4
+      },],
+      "wyniki":[{
+        "nazwa":"Objetosc","wynik": objetosckuli(4)
+      },
+      {
+        "nazwa":"Pole","wynik": polekuli(4)
+      }
+    ]
+    }]
+  }
+]
+function App() {
+  return (
+    <div className="App">
+      <header>
+        <h1>Bryly</h1>
+      </header>
+      <div id="main">
+        <table>
+          <tr>
+            <th>Bryla</th>
+            <th>Ilustarcja</th>
+            <th>Wzory</th>
+            <th>Przyklady</th>
+          </tr>
+          {Bryly.map((item,index)=>(
+          <tr key ={item.id}>
+            <td><h2>{item.nazwa}</h2></td>
+            <td><img src={item.imgsrc} alt={item.imgalt}></img></td>
+            <td>{item.wzory.map((itemW,indexW)=>(<p id="wzory">{itemW.nazwa}: {itemW.wzor}</p>))}</td>
+            <td>
+            {item.przyklad.map((itemT,indexT)=>(
+            <p>
+            {itemT.wymiary.map((itemR,indexR)=>(<p id="wymiary">{itemR.numer}. wymiar {itemR.wartosc}</p>))}
+            {itemT.wyniki.map((itemK,indexK)=>(<h2>{itemK.nazwa}: {itemK.wynik}</h2>))}</p>
+            ))}
+            </td>
+          </tr>
+          ))}
+        </table>
+      </div>
+    </div>
+  );
+}
+
+export default App;
