@@ -152,6 +152,53 @@ button:hover, #playerName:focus, #volumeControl:focus, #volumeControl:hover {
     box-shadow: 0 0 10px cyan;
 }
 
-#menu-buttons, #player, #options, header {
+#menu-buttons, #player, #options, header, #board, #gameInfo {
     display: none;
+}
+#game{
+    display: flex;
+    gap: 10px;
+    height: 100vh;
+}
+#board {
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+    border: solid 5px aqua;
+    background-color: black;
+    margin: 0 auto; 
+    position: relative;
+    top: 50%; 
+    transform: translateY(-50%);
+}
+.block {
+    border: solid 1px aqua;
+    flex: 0 0 auto;
+    box-sizing: border-box;
+    aspect-ratio: 1 / 1;
+}
+.row{
+    display: flex; 
+    justify-content: center;
+    gap: 0;
+}
+#gameInfo {
+    width: 20%;
+    height: 20%;
+    flex-direction: column;
+    justify-content: space-between;
+    color: cyan;
+    font-size: 20px;
+}
+#backtomenu {
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+    background: black;
+    border: 2px solid cyan;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: uppercase;
 }
