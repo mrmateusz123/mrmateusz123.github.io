@@ -28,7 +28,6 @@ td,th{
   border: 1px darkblue solid;
 }
 th{
-  font-size: 25px;
   color: blueviolet;
   padding: 20px;
 }
@@ -41,6 +40,10 @@ tr:hover{
 }
 #wymiary{
   color:yellow;
+}
+#pth{
+  color: blueviolet;
+  font-size: 20px;
 }
 h2{
   color: brown;
