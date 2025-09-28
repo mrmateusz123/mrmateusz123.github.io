@@ -16,10 +16,12 @@ function poleprost(a,b,h){
   return (2*a*b)+(2*a*h)+(2*b*h);
 }
 function objetosckuli(r){
-  return 4/3*Math.PI*(r**3);
+  // return 4/3*Math.PI*(r**3);
+  return Math.round(100*(4/3*Math.PI*(r**3)))/100;
 }
 function polekuli(r){
-  return 4*Math.PI*(r**2);
+  // return 4*Math.PI*(r**2);
+  return Math.round(100*(4*Math.PI*(r**2)))/100;
 }
 const Bryly = [
   {
@@ -119,9 +121,9 @@ function App() {
             <td>{item.wzory.map((itemW,indexW)=>(<p id="wzory">{itemW.nazwa}: {itemW.wzor}</p>))}</td>
             <td>
             {item.przyklad.map((itemT,indexT)=>(
-            <p>
+            <div>
             {itemT.wymiary.map((itemR,indexR)=>(<p id="wymiary">{itemR.numer}. wymiar {itemR.wartosc}</p>))}
-            {itemT.wyniki.map((itemK,indexK)=>(<h2>{itemK.nazwa}: {itemK.wynik}</h2>))}</p>
+            {itemT.wyniki.map((itemK,indexK)=>(<h2>{itemK.nazwa}: {itemK.wynik}</h2>))}</div>
             ))}
             </td>
           </tr>
