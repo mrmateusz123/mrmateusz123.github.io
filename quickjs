@@ -109,10 +109,10 @@ function App() {
       <div id="main">
         <table>
           <tr>
-            <th>Bryla</th>
-            <th>Ilustarcja</th>
-            <th>Wzory</th>
-            <th>Przyklady</th>
+            <th><p id="pth">Bryla</p></th>
+            <th><p id="pth">Ilustarcja</p></th>
+            <th><p id="pth">Wzory</p></th>
+            <th><p id="pth">Przyklady</p></th>
           </tr>
           {Bryly.map((item,index)=>(
           <tr key ={item.id}>
