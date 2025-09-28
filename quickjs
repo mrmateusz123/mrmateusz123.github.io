@@ -114,16 +114,16 @@ function App() {
             <th><p id="pth">Wzory</p></th>
             <th><p id="pth">Przyklady</p></th>
           </tr>
-          {Bryly.map((item,index)=>(
+          {Bryly.map((item)=>(
           <tr key ={item.id}>
             <td><h2>{item.nazwa}</h2></td>
             <td><img src={item.imgsrc} alt={item.imgalt}></img></td>
-            <td>{item.wzory.map((itemW,indexW)=>(<p id="wzory">{itemW.nazwa}: {itemW.wzor}</p>))}</td>
+            <td>{item.wzory.map((itemW)=>(<p id="wzory">{itemW.nazwa}: {itemW.wzor}</p>))}</td>
             <td>
-            {item.przyklad.map((itemT,indexT)=>(
+            {item.przyklad.map((itemT)=>(
             <div>
-            {itemT.wymiary.map((itemR,indexR)=>(<p id="wymiary">{itemR.numer}. wymiar {itemR.wartosc}</p>))}
-            {itemT.wyniki.map((itemK,indexK)=>(<h2>{itemK.nazwa}: {itemK.wynik}</h2>))}</div>
+            {itemT.wymiary.map((itemR)=>(<p id="wymiary">{itemR.numer}. wymiar {itemR.wartosc}</p>))}
+            {itemT.wyniki.map((itemK)=>(<h2>{itemK.nazwa}: {itemK.wynik}</h2>))}</div>
             ))}
             </td>
           </tr>
