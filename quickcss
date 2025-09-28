@@ -1,13 +1,22 @@
 .App {
-  text-align: center;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  text-align: center;
+  width: 100%;
 }
 header{
-  float: up;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 body{
   background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 h1{
   color: blue;
@@ -19,15 +28,16 @@ td,th{
   border: 1px darkblue solid;
 }
 th{
-  font-size: large;
+  font-size: 25px;
   color: blueviolet;
+  padding: 20px;
+}
+td{
+  padding: 0px 20px 0px 20px;
 }
 tr:hover{
   background-color: darkblue;
   color: blueviolet;
-}
-#wzory{
-  color: darkblue;
 }
 #wymiary{
   color:yellow;
@@ -38,4 +48,8 @@ h2{
 img{
   height: 100px;
   width: 100px;
+  padding: 10px;
+}
+h1,h2,p{
+  cursor:default;
 }
